@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>vidcha.js JQuery plugin Demo – Interactive HTML5 Video Chapters </title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+  <header>
+    <h1>vidcha.js – Demo</h1>
+    <p>Simple jQuery plugin for interactive HTML5 video chapters</p>
+    
+  </header>
+
+  <!-- html5 video -->
+  <section class="video">
+    <video class="vidchaVideo img-fluid" poster="assets/poster.jpg" controls>
+      <source src="assets/vidcha.mp4" type="video/mp4">
+    </video>
+  </section>
+
+  <!-- chapter navigation / set start time in seconds -->
+  <section>
+      <ul class="vidchaNav">
+        <li data-start="0">1. Starting</li>
+        <li data-start="12.6">2. Point1</li>
+        <li data-start="33.7">3. Point2</li>
+        <li data-start="43.3">4. Ending</li>
+      </ul>
+  </section>
+
+  <section class="main">
+  	<p>
+  	vidcha.js is a jQuery plugin for creating interactive chapters for HTML5 videos. By clicking on a chapter you jump directly to the appropriate position in the video. Also the current chapter is always highlighted when playing the video.
+  	</p>
+    
+  	All right reserved to 2021: <a href="https://siddiquemdsunny.com"  target="blank">Siddiquemd Sunny</a>
+  </section>
+</body>
+
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="js/vidcha.js"></script>
+
+<script>
+  $('video').click(function(){this.paused?this.play():this.pause();});
+</script>
+
+</html>
